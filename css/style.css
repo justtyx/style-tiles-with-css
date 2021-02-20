@@ -1,7 +1,6 @@
-/* change these */
+/* Playfair Display 600, Montserrat 400, 500, 600 and Roboto 300, 400, 500 import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600&family=Roboto:wght@300;400;500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -10,12 +9,12 @@
 }
 
 :root {
-  --bg-color: rgb(42, 49, 102);
-  --link-color: rgb(191, 31, 31);
-  --color-3: rgb(114, 114, 114);
+  --bg-color: #0dc2e2;
+  --link-color: #fed642;
+  --color-3: #727272;
 
-  --primary-font: 'Open Sans', 'Roboto', sans-serif;
-  --secondary-font: 'Open Sans', 'Roboto', sans-serif;
+  --primary-font: 'Playfair Display', serif;
+  --secondary-font: 'Montserrat', 'Roboto', sans-serif;
   --main-text-color: #000;
   --white-space: 1rem;
   --margin-bottom: 0.3rem;
@@ -26,15 +25,26 @@ a {
 }
 
 button:hover {
-  background-color: transparent;
-  color: var(--link-color);
+  background-color: var(--link-color);
   border: 2px solid var(--link-color);
 }
 
 button:active {
-  background-color: var(--link-color);
+  background-color: transparent;
   border: solid 2px var(--link-color);
-  color: #fff;
+  color: var(--link-color);
+}
+
+.secondary-button-unselected:hover {
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
+  background-color: transparent;
+}
+
+.secondary-button-unselected:active {
+  border: 2px solid var(--link-color);
+  color: white;
+  background-color: var(--link-color);
 }
 
 a:hover {
@@ -43,7 +53,7 @@ a:hover {
 
 html {
   font-size: 100%;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
 }
 
 header,
@@ -127,22 +137,6 @@ ul li:last-child {
   background-color: var(--color-3);
 }
 
-.textures li {
-  height: 30vw;
-  width: 40%;
-  margin-right: 5vw;
-}
-
-.images ul {
-  flex-direction: column;
-  text-align: center;
-}
-
-.images li {
-  display: block;
-  margin-bottom: 1rem;
-}
-
 button {
   text-align: center;
   text-decoration: none;
@@ -160,7 +154,7 @@ button {
 
 .primary-button {
   padding: 0.7rem 2rem;
-  border-radius: 3px;
+  border-radius: 7px;
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -193,7 +187,7 @@ button:focus-within {
 .h1-sample {
   font-size: 2.2rem;
   font-weight: 600;
-  text-transform: uppercase;
+  font-family: var(--primary-font);
 }
 
 .h2-sample {
@@ -209,9 +203,9 @@ p.typography-sample {
 }
 
 a {
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
   color: var(--bg-color);
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -262,8 +256,7 @@ p[class*="font-details-"] {
 }
 
 .address {
-  font-size: 1rem;
-  font-style: italic;
+  font-size: 0.9rem;
   color: var(--color-3);
   margin-bottom: var(--margin-bottom);
 }
